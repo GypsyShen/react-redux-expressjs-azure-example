@@ -1,5 +1,5 @@
 # react-redux-expressjs-azure-example
-A TODO list web app built with React and Redux as frontend, which is served by expressJS, and is deployed in Microsoft Azure Web App service.
+A TODO list web app built with React and Redux as frontend, which is served by expressJS, and is deployed in Microsoft Azure Web App service by GitHub.
 
 ## Create the Express App
 
@@ -64,11 +64,60 @@ Third, browse the Express app by the following URL in a browser:
 http://localhost:3001
 ```
 
-It should looks like:
+[TODO] It should looks like:
 
+## Deploy the Express App in Azure
 
+NOTE: this sesson is referenced from [3]
 
-## [TODO] Deploy express app in Azure
+* Step 1: browse Microsoft Azure Portal and sign in:
+
+```
+https://portal.azure.com/
+```
+
+* Step 2: create an new web app in Azure:
+
+In the dashboard of Azure Portal, create an new web app in the following steps:
+
+```
+New > Web + Mobile > Web App
+```
+[TODO: add screenshot]
+
+Fill in the web app details, including:
+
+```
+App name
+Subscription
+Resource Group
+OS
+App Service plan/Location
+Application Insights
+```
+[TODO: add screenshot]
+
+Then, hit the create button to create the web app.
+
+Wait for a little bit, then referesh the browser, the web app `react-redux-expressjs-azure-example` appears in the dashboard as App Service. Clicking on `react-redux-expressjs-azure-example` App Service brings up details of the azure app, from where the hosted app can be browsed by `Overview > Browse` with an url of `https://react-redux-expressjs-azure-example.azurewebsites.net`:
+
+[TODO: add screenshot]
+
+* Step 3: deploy the express app to azure
+
+Deployment is done by configuring the deployment options with github repo:
+
+```
+DEPLOYMENT > Deployment options > Choose Source > GitHub > Choose project and Choose branch > OK
+```
+
+Then, the express web app in GitHub shows up in the `Deployment options` screen and building. Once the building is passed, which looks like:
+
+[TODO: add screenshot]
+
+Browse the azure app, it should show the react app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
+
+[TODO: add screenshot]
 
 ## [TODO] Create react and redux TODO list app
 
@@ -83,3 +132,4 @@ It should looks like:
 
 [2] Express Application Generator: https://expressjs.com/en/starter/generator.html
 
+[3] Create a Node.js web app in Azure: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs
