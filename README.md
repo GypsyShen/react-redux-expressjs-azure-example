@@ -248,6 +248,14 @@ https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug consol
 
 If you see the `npm_modules/` and `build/` folders, it means azure uses the configured script because the default script doesn't generate modules for the redux app in `client` folder. It only generates modules for the express app because that's contained in the default deployment script.
 
+An alternative way to verify is:
+
+```
+https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > deployments > (select a deployment) > log.log
+```
+
+Edit the `log.log` file, you should find `Running custom deployment command...,`.
+
 ## Reference
 
 [1] Create React App with an Express Backend: https://daveceddia.com/create-react-app-express-backend/
