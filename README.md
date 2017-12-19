@@ -23,7 +23,7 @@ The command generates two items to the root folder:
 
 ```
 LICENSE
-react-backend // folder
+react-backend/
 ```
 
 * Step 3: move react-backend files to root folder
@@ -34,12 +34,12 @@ Now the root folder should contain the following items:
 
 ```
 app.js
-bin // folder
+bin/
 LICENSE
 package.json
-public // folder
-routes // folder
-views // folder
+public/
+routes/
+views/
 ```
 
 * Step 4: run the Express app locally
