@@ -121,7 +121,7 @@ Browse the azure app, it should show the react app in `https://react-redux-expre
 
 After this step, any change in the `master` branch triggers a new deployment in Azure.
 
-## [TODO] Add the React and Redux TODO-List App to the Express App
+## Add the React and Redux Todos App to the Express App
 
 * Step 1. Create react and redux TODO list app
 
