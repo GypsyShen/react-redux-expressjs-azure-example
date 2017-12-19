@@ -1,5 +1,5 @@
 # react-redux-expressjs-azure-example
-A TODO list web app built with React and Redux as frontend, which is served by expressJS, and is deployed in Microsoft Azure Web App service by GitHub.
+A Todos web app built with ReactJS and Redux as frontend, which is served by expressJS as backend, and deployed to Microsoft Azure Web App service by GitHub.
 
 ## Create the Express App
 
@@ -64,7 +64,7 @@ Third, browse the Express app by the following URL in a browser:
 http://localhost:3001
 ```
 
-[TODO] It should looks like:
+[TODO: add screenshot]
 
 ## Deploy the Express App in Azure
 
@@ -119,9 +119,64 @@ Browse the azure app, it should show the react app in `https://react-redux-expre
 
 [TODO: add screenshot]
 
-## [TODO] Create react and redux TODO list app
+After this step, any change in the `master` branch triggers a new deployment in Azure.
 
-## [TODO] Serve react and redux TODO list app
+## [TODO] Add the React and Redux TODO-List App to the Express App
+
+* Step 1. Create react and redux TODO list app
+
+First, create a `client` folder in the root folder to host the redux code.
+
+Then, add the Redux Todos Example [4] to the `client` rolder.
+
+Then, add modules for the redux todos app:
+
+in root folder:
+
+```
+cd client
+npm install
+```
+
+Browse the redux todos app:
+
+```
+npm start
+```
+
+Type `http://localhost:3000` in local browser, the redux todos app shows up:
+
+[TODO: add screenshot]
+
+* Step 2. Serve the React and Redux Todos App by the Express App
+
+The react and redux todos app is serverd by pointing the express app's frontend to the production build of the react and redux app.
+
+First, build the react and redux app with the following command in the `client` directory, which generates a `build/` folder:
+
+```
+npm run build
+```
+
+Then, configure `app.js` in the root folder to serve the react and redux app by replacing line 23 (`app.use(express.static(path.join(__dirname, 'public')));`) with:
+
+```
+app.use(express.static(path.join(__dirname, './client/build')));
+```
+
+Now the react and redux app should show up in the express port. To test it, in the root directory, run the express app in port `2048`:
+
+```
+PORT=2048 node bin/www
+```
+
+Then browse the express app in `http://localhost:2048`, the react and redux todos app shows up:
+
+[TODO: add screenshot]
+
+Finally, committing all the changes to `master` branch should deploy the react and redux app in Azure!
+
+[TODO: add screenshot]
 
 ## [TODO] Automate the web app deployment in Azure
 
@@ -133,3 +188,5 @@ Browse the azure app, it should show the react app in `https://react-redux-expre
 [2] Express Application Generator: https://expressjs.com/en/starter/generator.html
 
 [3] Create a Node.js web app in Azure: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs
+
+[4] Redux Todos example: https://github.com/reactjs/redux/tree/master/examples/todos
