@@ -207,7 +207,7 @@ azure site -h
 
 * Step 3. configure `deploy.sh` to generate the production build of react and redux todos app:
 
-Generating the production build of the react and redux app requires two steps:
+Generating the production build of the react and redux app requires two steps [7]:
 
 ```
 generate the modules
@@ -257,3 +257,5 @@ If you see the `npm_modules/` and `build/` folders, it means azure uses the conf
 [5] Azure Web App Deployment Script Generator: https://github.com/projectkudu/kudu/wiki/Deployment-hooks#deployment-script-generator
 
 [6] error: 'site' is not an azure command. See 'azure help': https://social.msdn.microsoft.com/Forums/azure/en-US/8459d5d1-63fb-44ae-8608-9cb0da79a560/error-site-is-not-an-azure-command-see-azure-help
+
+[7] My first experience with React, NodeJS and Azure: https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure
