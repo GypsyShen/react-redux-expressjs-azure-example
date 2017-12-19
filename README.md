@@ -178,8 +178,71 @@ Finally, committing all the changes to `master` branch should deploy the react a
 
 [TODO: add screenshot]
 
-## [TODO] Automate the web app deployment in Azure
+## Automate the Deployment in Azure
 
+If you've noticed, we have to manually commit the production build of the redux app to see any changes of the todos app in Azure. That's very inconvenient. The good news is that azure deployment is configurable in scripts. This means that we can configure the deployment scripts of azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it.
+
+Some blog posts suggest downloading the `deployment.cmd` file from the azure project configuration portal, configure it, and place it to the root directory. Then azure would run the configured `deployment.cmd` file for deployment. Some blog posts says from the azure project configuration portal, we can download a zip file containing two files: `.deployment` and `deployment.cmd`, but I wasn't able to download a zip file. Instead, I can only download the `deployment.cmd`, and when I configured and added it to the root directory, the script is never executed on azure deployment.
+
+After some effort, I found out that using Azure Web App Deployment Script Generator [5] works:
+
+* Step 1. install Azure Web App Deployment Script Generator:
+
+```
+npm install azure-cli -g
+```
+
+* Step 2. generate `.deployment` and `deploy.sh` in root directory:
+
+```
+azure site deploymentscript --node
+```
+
+If you see an error says `error: 'site' is not an azure command. See 'azure help'.`, try to change azure-cli's mode to 'asm' [6]:
+
+```
+azure config mode asm
+azure site -h
+```
+
+* Step 3. configure `deploy.sh` to generate the production build of react and redux todos app:
+
+Generating the production build of the react and redux app requires two steps:
+
+```
+generate the modules
+generate the proudction build with the build command of `react-scripts.cmd` in the generated modules
+```
+
+Here is the configuration in `deploy.sh` of the two steps:
+
+```
+# 4. Install client libraries
+if [ -e "$DEPLOYMENT_TARGET/client/package.json" ]; then
+  cd "$DEPLOYMENT_TARGET/client"
+  eval $NPM_CMD install
+  exitWithMessageOnError "npm failed"
+  cd - > /dev/null
+fi
+
+# 5. Build react & redux client
+if [ -e "$DEPLOYMENT_TARGET/client/node_modules/.bin/react-scripts.cmd" ]; then
+  cd "$DEPLOYMENT_TARGET/client"
+  ./node_modules/.bin/react-scripts build
+  exitWithMessageOnError "npm failed"
+  cd - > /dev/null
+fi
+```
+
+Add the above code snippet after the code of `# 3. Install npm packages` (line 112) after line 118.
+
+Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in Azure Configuration Portal of the app:
+
+```
+https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > wwwroot > client
+```
+
+If you see the `npm_modules/` and `build/` folders, it means azure uses the configured script because the default script doesn't generate modules for the redux app in `client` folder. It only generates modules for the express app because that's contained in the default deployment script.
 
 ## Reference
 
@@ -190,3 +253,7 @@ Finally, committing all the changes to `master` branch should deploy the react a
 [3] Create a Node.js web app in Azure: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs
 
 [4] Redux Todos example: https://github.com/reactjs/redux/tree/master/examples/todos
+
+[5] Azure Web App Deployment Script Generator: https://github.com/projectkudu/kudu/wiki/Deployment-hooks#deployment-script-generator
+
+[6] error: 'site' is not an azure command. See 'azure help': https://social.msdn.microsoft.com/Forums/azure/en-US/8459d5d1-63fb-44ae-8608-9cb0da79a560/error-site-is-not-an-azure-command-see-azure-help
