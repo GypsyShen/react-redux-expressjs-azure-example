@@ -1,5 +1,5 @@
 # react-redux-expressjs-azure-example
-A Todos web app built with ReactJS and Redux as frontend, which is served by expressJS as backend, and deployed to Microsoft Azure Web App service by GitHub.
+A Todos web app built with ReactJS and Redux as frontend, served by expressJS as backend, and deployed to Microsoft Azure Web App service by GitHub.
 
 The web app is live on Microsoft Azure:
 
