@@ -3,7 +3,7 @@ A TODO list web app built with React and Redux as frontend, which is served by e
 
 ## Create the Express App
 
-NOTE: Step 1 to * is from reference [1].
+NOTE: this section is referenced from [1].
 
 * Step 1: install the express-generator [2] utility:
 
@@ -23,7 +23,7 @@ The command generates two items to the root folder:
 
 ```
 LICENSE
-react-backend // folder
+react-backend/
 ```
 
 * Step 3: move react-backend files to root folder
@@ -34,12 +34,12 @@ Now the root folder should contain the following items:
 
 ```
 app.js
-bin // folder
+bin/
 LICENSE
 package.json
-public // folder
-routes // folder
-views // folder
+public/
+routes/
+views/
 ```
 
 * Step 4: run the Express app locally
@@ -68,12 +68,6 @@ It should looks like:
 
 
 
-### Reference
-
-[1] Create React App with an Express Backend: https://daveceddia.com/create-react-app-express-backend/
-
-[2] Express Application Generator: https://expressjs.com/en/starter/generator.html
-
 ## [TODO] Deploy express app in Azure
 
 ## [TODO] Create react and redux TODO list app
@@ -81,3 +75,11 @@ It should looks like:
 ## [TODO] Serve react and redux TODO list app
 
 ## [TODO] Automate the web app deployment in Azure
+
+
+## Reference
+
+[1] Create React App with an Express Backend: https://daveceddia.com/create-react-app-express-backend/
+
+[2] Express Application Generator: https://expressjs.com/en/starter/generator.html
+
