@@ -3,7 +3,7 @@ A TODO list web app built with React and Redux as frontend, which is served by e
 
 ## Create the Express App
 
-NOTE: Step 1 to * is from reference [1].
+NOTE: this section is referenced from [1].
 
 * Step 1: install the express-generator [2] utility:
 
