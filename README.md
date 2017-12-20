@@ -147,7 +147,7 @@ npm start
 
 Type `http://localhost:3000` in local browser, the redux todos app shows up:
 
-[TODO: add screenshot]
+![redux-todos-localhost-3000](githubimages/redux-todos-localhost-3000.png "Redux Todos App in Localhost 3000")
 
 * Step 2. Serve the React and Redux Todos App by the Express App
 
@@ -173,11 +173,11 @@ PORT=2048 node bin/www
 
 Then browse the express app in `http://localhost:2048`, the react and redux todos app shows up:
 
-[TODO: add screenshot]
+![redux-todos-serverdbyexpress-localhost-2048](githubimages/redux-todos-serverdbyexpress-localhost-2048.png "Redux Todos App Served by Express and Hosted in Localhost 2048")
 
 Finally, committing all the changes to `master` branch should deploy the react and redux app in Azure!
 
-[TODO: add screenshot]
+![redux-todos-servedbyexpress-hostedinazure](githubimages/redux-todos-servedbyexpress-hostedinazure.png "Redux Todos App Served by Express and Hosted in Azure")
 
 ## Automate the Deployment in Azure
 
