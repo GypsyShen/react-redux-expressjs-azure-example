@@ -3,6 +3,11 @@ A Todos web app built with ReactJS and Redux as frontend, served by expressJS as
 
 https://react-redux-expressjs-azure-example.azurewebsites.net
 
+* [Create the Express App](#create-the-express-app)
+* [Deploy the Express Ap in Azure](#deploy-the-express-app-in-azure)
+* [Add the React and Redux Todos App to the Express App](#add-the-react-and-redux-todos-app-to-the-express-app)
+* [Automate the Deployment in Azure](#automate-the-deployment-in-azure)
+
 ## Create the Express App
 
 NOTE: this section is referenced from [1].
