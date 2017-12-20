@@ -297,14 +297,14 @@ Edit the `log.log` file, you should find `Running custom deployment command...,`
 
 #### [1] [Create React App with an Express Backend](https://daveceddia.com/create-react-app-express-backend/)
 
-[2] Express Application Generator: https://expressjs.com/en/starter/generator.html
+#### [2] [Express Application Generator](https://expressjs.com/en/starter/generator.html)
 
-[3] Create a Node.js web app in Azure: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs
+#### [3] [Create a Node.js web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs)
 
-[4] Redux Todos example: https://github.com/reactjs/redux/tree/master/examples/todos
+#### [4] [Redux Todos example](https://github.com/reactjs/redux/tree/master/examples/todos)
 
-[5] Azure Web App Deployment Script Generator: https://github.com/projectkudu/kudu/wiki/Deployment-hooks#deployment-script-generator
+#### [5] [Azure Web App Deployment Script Generator](https://github.com/projectkudu/kudu/wiki/Deployment-hooks#deployment-script-generator)
 
-[6] error: 'site' is not an azure command. See 'azure help': https://social.msdn.microsoft.com/Forums/azure/en-US/8459d5d1-63fb-44ae-8608-9cb0da79a560/error-site-is-not-an-azure-command-see-azure-help
+#### [6] [error: 'site' is not an azure command. See 'azure help'](https://social.msdn.microsoft.com/Forums/azure/en-US/8459d5d1-63fb-44ae-8608-9cb0da79a560/error-site-is-not-an-azure-command-see-azure-help)
 
-[7] My first experience with React, NodeJS and Azure: https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure
+#### [7] [My first experience with React, NodeJS and Azure](https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure)
