@@ -65,8 +65,7 @@ Third, browse the Express app by the following URL in a browser:
 ```
 http://localhost:3001
 ```
-
-[TODO: add screenshot]
+![express-app-localhost-3001](githubimages/express-app-localhost-3001.png "Express App in Localhost 3001")
 
 ## Deploy the Express App in Azure
 
