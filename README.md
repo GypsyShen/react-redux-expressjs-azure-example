@@ -20,13 +20,13 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 
 NOTE: this section is referenced from [[1]](#1-create-react-app-with-an-express-backend).
 
-### Step 1: install the express-generator [[2]](#2-express-application-generator) utility
+#### Step 1: install the express-generator [[2]](#2-express-application-generator) utility
 
 ```
 $ npm install -g express-generator
 ```
 
-### Step 2: create the Express app
+#### Step 2: create the Express app
 
 In the root folder of the project, run:
 
@@ -41,7 +41,7 @@ LICENSE
 react-backend/
 ```
 
-### Step 3: move react-backend files to root folder
+#### Step 3: move react-backend files to root folder
 
 Moving react-backend files to the root folder makes it simpler to host the web app in Azure, because Azure would directly take express app files in root folder of the project and connect it to its hosting service. But it is doable to not moving the files and configure project files in Azure for deployment.
 
@@ -57,7 +57,7 @@ routes/
 views/
 ```
 
-### Step 4: run the Express app locally
+#### Step 4: run the Express app locally
 
 In root folder:
 
@@ -90,13 +90,13 @@ http://localhost:3001
 
 NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)
 
-### Step 1: browse Microsoft Azure Portal and sign in
+#### Step 1: browse Microsoft Azure Portal and sign in
 
 ```
 https://portal.azure.com/
 ```
 
-### Step 2: create an new web app in Azure
+#### Step 2: create an new web app in Azure
 
 In the dashboard of Azure Portal, create an new web app in the following steps:
 
@@ -129,7 +129,7 @@ Wait for a little bit, then referesh the browser, the web app `react-redux-expre
   <img src="githubimages/initial-azure-web-app.png">
 </p>
 
-### Step 3: deploy the express app to azure
+#### Step 3: deploy the express app to azure
 
 Deployment is done by configuring the deployment options with github repo:
 
@@ -156,7 +156,7 @@ After this step, any change in the `master` branch triggers a new deployment in 
 * [Step 1: create redux todos app](#step-1-create-redux-todos-app)
 * [Step 2: serve the redux todos app by the express app](#step-2-serve-the-redux-todos-app-by-the-express-app)
 
-### Step 1: create redux todos app
+#### Step 1: create redux todos app
 
 First, create a `client` folder in the root folder to host the redux code.
 
@@ -181,7 +181,7 @@ Type `http://localhost:3000` in local browser, the redux todos app shows up:
   <img src="githubimages/redux-todos-localhost-3000.png">
 </p>
 
-### Step 2: serve the redux todos app by the express app
+#### Step 2: serve the redux todos app by the express app
 
 The react and redux todos app is serverd by pointing the express app's frontend to the production build of the react and redux app.
 
@@ -227,13 +227,13 @@ Some blog posts suggest downloading the `deployment.cmd` file from the azure pro
 
 After some effort, I found out that using Azure Web App Deployment Script Generator [[5]](#5-azure-web-app-deployment-script-generator) works:
 
-### Step 1: install Azure Web App Deployment Script Generator
+#### Step 1: install Azure Web App Deployment Script Generator
 
 ```
 npm install azure-cli -g
 ```
 
-### Step 2: generate `.deployment` and `deploy.sh` in root directory
+#### Step 2: generate `.deployment` and `deploy.sh` in root directory
 
 ```
 azure site deploymentscript --node
@@ -246,7 +246,7 @@ azure config mode asm
 azure site -h
 ```
 
-### Step 3: configure `deploy.sh` to generate the production build of redux todos app
+#### Step 3: configure `deploy.sh` to generate the production build of redux todos app
 
 Generating the production build of the react and redux app requires two steps [[7]](#7-my-first-experience-with-react-nodejs-and-azure):
 
