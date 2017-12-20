@@ -66,7 +66,7 @@ Third, browse the Express app in localhost 3001:
 http://localhost:3001
 ```
 <p align="center">
-  <img height="320" src="githubimages/express-app-localhost-3001.png">
+  <img src="githubimages/express-app-localhost-3001.png">
 </p>
 
 ## Deploy the Express App in Azure
@@ -87,7 +87,7 @@ In the dashboard of Azure Portal, create an new web app in the following steps:
 New > Web + Mobile > Web App
 ```
 <p align="center">
-  <img height="320" src="githubimages/azure-portal-new-web-app.png">
+  <img src="githubimages/azure-portal-new-web-app.png">
 </p>
 
 Fill in the web app details, including:
@@ -101,7 +101,7 @@ App Service plan/Location
 Application Insights
 ```
 <p align="center">
-  <img height="320" src="githubimages/azure-portal-web-app-details.png">
+  <img width="320" src="githubimages/azure-portal-web-app-details.png">
 </p>
 
 Then, hit the create button to create the web app.
@@ -109,7 +109,7 @@ Then, hit the create button to create the web app.
 Wait for a little bit, then referesh the browser, the web app `react-redux-expressjs-azure-example` appears in the dashboard as App Service. Clicking on `react-redux-expressjs-azure-example` App Service brings up details of the azure app, from where the hosted app can be browsed by `Overview > Browse` with an url of `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
 <p align="center">
-  <img height="320" src="githubimages/initial-azure-web-app.png">
+  <img src="githubimages/initial-azure-web-app.png">
 </p>
 
 * Step 3: deploy the express app to azure
@@ -123,13 +123,13 @@ DEPLOYMENT > Deployment options > Choose Source > GitHub > Choose project and Ch
 Then, the express web app in GitHub shows up in the `Deployment options` screen and building. Once the building is passed, which looks like:
 
 <p align="center">
-  <img height="320" src="githubimages/azure-build-passed.png">
+  <img src="githubimages/azure-build-passed.png">
 </p>
 
 Browse the azure app, it should show the express app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
 <p align="center">
-  <img height="320" src="githubimages/express-app-in-azure.png">
+  <img src="githubimages/express-app-in-azure.png">
 </p>
 
 After this step, any change in the `master` branch triggers a new deployment in Azure.
@@ -160,7 +160,7 @@ npm start
 Type `http://localhost:3000` in local browser, the redux todos app shows up:
 
 <p align="center">
-  <img height="320" src="githubimages/redux-todos-localhost-3000.png">
+  <img src="githubimages/redux-todos-localhost-3000.png">
 </p>
 
 * Step 2. Serve the React and Redux Todos App by the Express App
@@ -188,13 +188,13 @@ PORT=2048 node bin/www
 Then browse the express app in `http://localhost:2048`, the react and redux todos app shows up:
 
 <p align="center">
-  <img height="320" src="githubimages/redux-todos-serverdbyexpress-localhost-2048.png">
+  <img src="githubimages/redux-todos-serverdbyexpress-localhost-2048.png">
 </p>
 
 Finally, committing all the changes to `master` branch should deploy the react and redux app in Azure!
 
 <p align="center">
-  <img height="320" src="githubimages/redux-todos-servedbyexpress-hostedinazure.png">
+  <img src="githubimages/redux-todos-servedbyexpress-hostedinazure.png">
 </p>
 
 ## Automate the Deployment in Azure
