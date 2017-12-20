@@ -16,9 +16,9 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 * [Step 3: move react-backend files to root folder](#step-3-move-react-backend-files-to-root-folder)
 * [Step 4: run the Express app locally](#step-4-run-the-express-app-locally)
 
-NOTE: this section is referenced from [1].
+NOTE: this section is referenced from [1](#1-create-react-app-with-an-express-backend).
 
-### Step 1: install the express-generator [2] utility
+### Step 1: install the express-generator [2](#2-express-application-generator) utility
 
 ```
 $ npm install -g express-generator
@@ -86,7 +86,7 @@ http://localhost:3001
 * [Step 2: create an new web app in Azure](#step-2-create-an-new-web-app-in-azure)
 * [Step 3: deploy the express app to azure](#step-3-deploy-the-express-app-to-azure)
 
-NOTE: this sesson is referenced from [3]
+NOTE: this sesson is referenced from [3](#3-create-a-nodejs-web-app-in-azure)
 
 ### Step 1: browse Microsoft Azure Portal and sign in
 
@@ -158,11 +158,9 @@ After this step, any change in the `master` branch triggers a new deployment in 
 
 First, create a `client` folder in the root folder to host the redux code.
 
-Then, add the Redux Todos Example [4] to the `client` rolder.
+Then, add the Redux Todos Example [4](#4-redux-todos-example) to the `client` rolder.
 
-Then, add modules for the redux todos app:
-
-in root folder:
+Then, add modules for the redux todos app. In root folder:
 
 ```
 cd client
@@ -225,7 +223,7 @@ If you've noticed, we have to manually commit the production build of the redux 
 
 Some blog posts suggest downloading the `deployment.cmd` file from the azure project configuration portal, configure it, and place it to the root directory. Then azure would run the configured `deployment.cmd` file for deployment. Some blog posts says from the azure project configuration portal, we can download a zip file containing two files: `.deployment` and `deployment.cmd`, but I wasn't able to download a zip file. Instead, I can only download the `deployment.cmd`, and when I configured and added it to the root directory, the script is never executed on azure deployment.
 
-After some effort, I found out that using Azure Web App Deployment Script Generator [5] works:
+After some effort, I found out that using Azure Web App Deployment Script Generator [5](#5-azure-web-app-deployment-script-generator) works:
 
 ### Step 1: install Azure Web App Deployment Script Generator
 
@@ -239,7 +237,7 @@ npm install azure-cli -g
 azure site deploymentscript --node
 ```
 
-If you see an error says `error: 'site' is not an azure command. See 'azure help'.`, try to change azure-cli's mode to 'asm' [6]:
+If you see an error says `error: 'site' is not an azure command. See 'azure help'.`, try to change azure-cli's mode to 'asm' [6](#6-error-site-is-not-an-azure-command-see-azure-help):
 
 ```
 azure config mode asm
@@ -248,7 +246,7 @@ azure site -h
 
 ### Step 3: configure `deploy.sh` to generate the production build of redux todos app
 
-Generating the production build of the react and redux app requires two steps [7]:
+Generating the production build of the react and redux app requires two steps [7](#7-my-first-experience-with-react-nodejs-and-azure):
 
 ```
 generate the modules
