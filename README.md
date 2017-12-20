@@ -84,7 +84,7 @@ In the dashboard of Azure Portal, create an new web app in the following steps:
 ```
 New > Web + Mobile > Web App
 ```
-[TODO: add screenshot]
+![azure-portal-new-web-app](githubimages/azure-portal-new-web-app.png "Azure Portal of Add New Web App")
 
 Fill in the web app details, including:
 
@@ -96,13 +96,13 @@ OS
 App Service plan/Location
 Application Insights
 ```
-[TODO: add screenshot]
+![azure-portal-web-app-details](githubimages/azure-portal-web-app-details.png "Azure Portal of Web App Details")
 
 Then, hit the create button to create the web app.
 
 Wait for a little bit, then referesh the browser, the web app `react-redux-expressjs-azure-example` appears in the dashboard as App Service. Clicking on `react-redux-expressjs-azure-example` App Service brings up details of the azure app, from where the hosted app can be browsed by `Overview > Browse` with an url of `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
-[TODO: add screenshot]
+![initial-azure-web-app](githubimages/initial-azure-web-app.png "Initial Azure Web App")
 
 * Step 3: deploy the express app to azure
 
@@ -114,11 +114,11 @@ DEPLOYMENT > Deployment options > Choose Source > GitHub > Choose project and Ch
 
 Then, the express web app in GitHub shows up in the `Deployment options` screen and building. Once the building is passed, which looks like:
 
-[TODO: add screenshot]
+![azure-build-passed](githubimages/azure-build-passed.png "Azure Build Passed")
 
-Browse the azure app, it should show the react app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
+Browse the azure app, it should show the express app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
-[TODO: add screenshot]
+![express-app-in-azure](githubimages/express-app-in-azure.png "Express App in Azure")
 
 After this step, any change in the `master` branch triggers a new deployment in Azure.
 
