@@ -7,8 +7,14 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 * [Deploy the Express Ap in Azure](#deploy-the-express-app-in-azure)
 * [Add the React and Redux Todos App to the Express App](#add-the-react-and-redux-todos-app-to-the-express-app)
 * [Automate the Deployment in Azure](#automate-the-deployment-in-azure)
+* [Reference](#reference)
 
 ## Create the Express App
+
+* [Step 1: install the express-generator utility](#step-1-install-the-express-generator-2-utility)
+* [Step 2: create the Express app](#step-2-create-the-express-app)
+* [Step 3: move react-backend files to root folder](#step-3-move-react-backend-files-to-root-folder)
+* [Step 4: run the Express app locally](#step-4-run-the-express-app-locally)
 
 NOTE: this section is referenced from [1].
 
@@ -76,6 +82,10 @@ http://localhost:3001
 
 ## Deploy the Express App in Azure
 
+* [Step 1: browse Microsoft Azure Portal and sign in](#step-1-browse-microsoft-azure-portal-and-sign-in)
+* [Step 2: create an new web app in Azure](#step-2-create-an-new-web-app-in-azure)
+* [Step 3: deploy the express app to azure](#step-3-deploy-the-express-app-to-azure)
+
 NOTE: this sesson is referenced from [3]
 
 ### Step 1: browse Microsoft Azure Portal and sign in
@@ -141,6 +151,9 @@ After this step, any change in the `master` branch triggers a new deployment in 
 
 ## Add the React and Redux Todos App to the Express App
 
+* [Step 1: create redux todos app](#step-1-create-redux-todos-app)
+* [Step 2: serve the redux todos app by the express app](#step-2-serve-the-redux-todos-app-by-the-express-app)
+
 ### Step 1: create redux todos app
 
 First, create a `client` folder in the root folder to host the redux code.
@@ -204,19 +217,23 @@ Finally, committing all the changes to `master` branch should deploy the react a
 
 ## Automate the Deployment in Azure
 
+* [Step 1: install Azure Web App Deployment Script Generator](#step-1-install-azure-web-app-deployment-script-generator)
+* [Step 2: generate `.deployment` and `deploy.sh` in root directory](#step-2-generate-deployment-and-deploysh-in-root-directory)
+* [Step 3: configure `deploy.sh` to generate the production build of redux todos app](#step-3-configure-deploysh-to-generate-the-production-build-of-redux-todos-app)
+
 If you've noticed, we have to manually commit the production build of the redux app to see any changes of the todos app in Azure. That's very inconvenient. The good news is that azure deployment is configurable in scripts. This means that we can configure the deployment scripts of azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it.
 
 Some blog posts suggest downloading the `deployment.cmd` file from the azure project configuration portal, configure it, and place it to the root directory. Then azure would run the configured `deployment.cmd` file for deployment. Some blog posts says from the azure project configuration portal, we can download a zip file containing two files: `.deployment` and `deployment.cmd`, but I wasn't able to download a zip file. Instead, I can only download the `deployment.cmd`, and when I configured and added it to the root directory, the script is never executed on azure deployment.
 
 After some effort, I found out that using Azure Web App Deployment Script Generator [5] works:
 
-### Step 1: install Azure Web App Deployment Script Generator:
+### Step 1: install Azure Web App Deployment Script Generator
 
 ```
 npm install azure-cli -g
 ```
 
-### Step 2: generate `.deployment` and `deploy.sh` in root directory:
+### Step 2: generate `.deployment` and `deploy.sh` in root directory
 
 ```
 azure site deploymentscript --node
@@ -229,7 +246,7 @@ azure config mode asm
 azure site -h
 ```
 
-### Step 3: configure `deploy.sh` to generate the production build of redux todos app:
+### Step 3: configure `deploy.sh` to generate the production build of redux todos app
 
 Generating the production build of the react and redux app requires two steps [7]:
 
