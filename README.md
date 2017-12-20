@@ -60,7 +60,7 @@ Second, run the app by the following command:
 PORT=3001 node bin/www
 ```
 
-Third, browse the Express app by the following URL in a browser:
+Third, browse the Express app in localhost 3001:
 
 ```
 http://localhost:3001
