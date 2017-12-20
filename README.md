@@ -295,7 +295,7 @@ Edit the `log.log` file, you should find `Running custom deployment command...,`
 
 ## Reference
 
-[1] Create React App with an Express Backend: https://daveceddia.com/create-react-app-express-backend/
+#### [1] Create React App with an Express Backend: https://daveceddia.com/create-react-app-express-backend/
 
 [2] Express Application Generator: https://expressjs.com/en/starter/generator.html
 
