@@ -86,7 +86,7 @@ http://localhost:3001
 
 * [Step 1: browse Microsoft Azure Portal and sign in](#step-1-browse-microsoft-azure-portal-and-sign-in)
 * [Step 2: create an new web app in Azure](#step-2-create-an-new-web-app-in-azure)
-* [Step 3: deploy the express app to azure](#step-3-deploy-the-express-app-to-azure)
+* [Step 3: deploy the express app to Azure](#step-3-deploy-the-express-app-to-azure)
 
 _NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)._
 
@@ -123,13 +123,13 @@ Application Insights
 
 Then, hit the create button to create the web app.
 
-Wait for a little bit, then referesh the browser, the web app `react-redux-expressjs-azure-example` appears in the dashboard as App Service. Clicking on `react-redux-expressjs-azure-example` App Service brings up details of the azure app, from where the hosted app can be browsed by `Overview > Browse` with an url of `https://react-redux-expressjs-azure-example.azurewebsites.net`:
+Wait for a little bit, then referesh the browser, the web app `react-redux-expressjs-azure-example` appears in the dashboard as App Service. Clicking on `react-redux-expressjs-azure-example` App Service brings up details of the Azure app, from where the hosted app can be browsed by `Overview > Browse` with an url of `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
 <p align="center">
   <img src="githubimages/initial-azure-web-app.png">
 </p>
 
-#### Step 3: deploy the express app to azure
+#### Step 3: deploy the express app to Azure
 
 Deployment is done by configuring the deployment options with github repo:
 
@@ -143,7 +143,7 @@ Then, the express web app in GitHub shows up in the `Deployment options` screen 
   <img src="githubimages/azure-build-passed.png">
 </p>
 
-Browse the azure app, it should show the express app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
+Browse the Azure app, it should show the express app in `https://react-redux-expressjs-azure-example.azurewebsites.net`:
 
 <p align="center">
   <img src="githubimages/express-app-in-azure.png">
@@ -221,7 +221,7 @@ Finally, committing all the changes to `master` branch should deploy the react a
 * [Step 2: generate `.deployment` and `deploy.sh` in root directory](#step-2-generate-deployment-and-deploysh-in-root-directory)
 * [Step 3: configure `deploy.sh` to generate the production build of redux todos app](#step-3-configure-deploysh-to-generate-the-production-build-of-redux-todos-app)
 
-If you've noticed, we have to manually commit the production build of the redux app to see changes of the todos app in Azure. That's very inconvenient. The good news is that azure deployment is configurable in scripts. This means that we can configure the deployment scripts of azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it. After some effort, I found out that using Azure Web App Deployment Script Generator [[5]](#5-azure-web-app-deployment-script-generator) works:
+If you've noticed, we have to manually commit the production build of the redux app to see changes of the todos app in Azure. That's very inconvenient. The good news is that Azure deployment is configurable in scripts. This means that we can configure the deployment scripts of Azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it. After some effort, I found out that using Azure Web App Deployment Script Generator [[5]](#5-azure-web-app-deployment-script-generator) works:
 
 #### Step 1: install Azure Web App Deployment Script Generator
 
