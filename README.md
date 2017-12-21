@@ -3,7 +3,7 @@ A Todos web app built with ReactJS and Redux as frontend, served by expressJS as
 
 https://react-redux-expressjs-azure-example.azurewebsites.net
 
-## Content
+## Table of Contents
 
 * [Create the Express App](#create-the-express-app)
 * [Deploy the Express Ap in Azure](#deploy-the-express-app-in-azure)
@@ -18,7 +18,7 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 * [Step 3: move react-backend files to root folder](#step-3-move-react-backend-files-to-root-folder)
 * [Step 4: run the Express app locally](#step-4-run-the-express-app-locally)
 
-NOTE: this section is referenced from [[1]](#1-create-react-app-with-an-express-backend).
+_NOTE: this section is referenced from [[1]](#1-create-react-app-with-an-express-backend)._
 
 #### Step 1: install the express-generator [[2]](#2-express-application-generator) utility
 
@@ -88,7 +88,7 @@ http://localhost:3001
 * [Step 2: create an new web app in Azure](#step-2-create-an-new-web-app-in-azure)
 * [Step 3: deploy the express app to azure](#step-3-deploy-the-express-app-to-azure)
 
-NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)
+_NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)_
 
 #### Step 1: browse Microsoft Azure Portal and sign in
 
