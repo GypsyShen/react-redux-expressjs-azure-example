@@ -88,7 +88,7 @@ http://localhost:3001
 * [Step 2: create an new web app in Azure](#step-2-create-an-new-web-app-in-azure)
 * [Step 3: deploy the express app to azure](#step-3-deploy-the-express-app-to-azure)
 
-_NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)_
+_NOTE: this sesson is referenced from [[3]](#3-create-a-nodejs-web-app-in-azure)._
 
 #### Step 1: browse Microsoft Azure Portal and sign in
 
