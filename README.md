@@ -221,11 +221,7 @@ Finally, committing all the changes to `master` branch should deploy the react a
 * [Step 2: generate `.deployment` and `deploy.sh` in root directory](#step-2-generate-deployment-and-deploysh-in-root-directory)
 * [Step 3: configure `deploy.sh` to generate the production build of redux todos app](#step-3-configure-deploysh-to-generate-the-production-build-of-redux-todos-app)
 
-If you've noticed, we have to manually commit the production build of the redux app to see changes of the todos app in Azure. That's very inconvenient. The good news is that azure deployment is configurable in scripts. This means that we can configure the deployment scripts of azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it.
-
-Some blog posts suggest downloading the `deployment.cmd` file from the azure project configuration portal, configure it, and place it to the root directory. Then azure would run the configured `deployment.cmd` file for deployment. Some blog posts says from the azure project configuration portal, we can download a zip file containing two files: `.deployment` and `deployment.cmd`, but I wasn't able to download a zip file. Instead, I can only download the `deployment.cmd`, and when I configured and added it to the root directory, the script is never executed on azure deployment.
-
-After some effort, I found out that using Azure Web App Deployment Script Generator [[5]](#5-azure-web-app-deployment-script-generator) works:
+If you've noticed, we have to manually commit the production build of the redux app to see changes of the todos app in Azure. That's very inconvenient. The good news is that azure deployment is configurable in scripts. This means that we can configure the deployment scripts of azure to automatically generate the production build of the redux app before it's deployed. However, it took me a while to figure out the reliable way to do it. After some effort, I found out that using Azure Web App Deployment Script Generator [[5]](#5-azure-web-app-deployment-script-generator) works:
 
 #### Step 1: install Azure Web App Deployment Script Generator
 
@@ -277,15 +273,15 @@ fi
 
 Add the above code snippet after the code of `# 3. Install npm packages` (line 112) after line 118.
 
-Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in Azure Configuration Portal of the app:
+Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in the Kudu dashboard of the Azure web app:
 
 ```
 https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > wwwroot > client
 ```
 
-If you see the `npm_modules/` and `build/` folders, it means azure uses the configured script because the default script doesn't generate modules for the redux app in `client` folder. It only generates modules for the express app because that's contained in the default deployment script.
+If you see the `npm_modules/` and `build/` folders, it means Azure uses the configured script. Because the default script doesn't generate modules for the redux app in the `client` folder. It only generates modules for the express app because that's contained in the default deployment script.
 
-An alternative way to verify is:
+An alternative way to verify is to check the log of deployment:
 
 ```
 https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > deployments > (select a deployment) > log.log
