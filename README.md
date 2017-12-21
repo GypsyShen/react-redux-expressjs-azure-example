@@ -137,7 +137,7 @@ Deployment is done by configuring the deployment options with github repo:
 DEPLOYMENT > Deployment options > Choose Source > GitHub > Choose project and Choose branch > OK
 ```
 
-Then, the express web app in GitHub shows up in the `Deployment options` screen and building. Once the building is passed, which looks like:
+Then, the express web app in GitHub shows up in the `Deployment options` screen and building. Once the building is passed, the dashboard looks like:
 
 <p align="center">
   <img src="githubimages/azure-build-passed.png">
