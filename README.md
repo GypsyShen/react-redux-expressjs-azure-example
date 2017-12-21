@@ -6,7 +6,7 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 ## Table of Contents
 
 * [Create the Express App](#create-the-express-app)
-* [Deploy the Express Ap in Azure](#deploy-the-express-app-in-azure)
+* [Deploy the Express App in Azure](#deploy-the-express-app-in-azure)
 * [Add the React and Redux Todos App to the Express App](#add-the-react-and-redux-todos-app-to-the-express-app)
 * [Automate the Deployment in Azure](#automate-the-deployment-in-azure)
 * [Reference](#reference)
