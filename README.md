@@ -9,7 +9,7 @@ https://react-redux-expressjs-azure-example.azurewebsites.net
 * [Deploy the Express App in Azure](#deploy-the-express-app-in-azure)
 * [Add the React and Redux Todos App to the Express App](#add-the-react-and-redux-todos-app-to-the-express-app)
 * [Automate the Deployment in Azure](#automate-the-deployment-in-azure)
-* [Reference](#reference)
+* [References](#references)
 
 ## Create the Express App
 
@@ -289,7 +289,7 @@ https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug consol
 
 Edit the `log.log` file, you should find `Running custom deployment command...,`.
 
-## Reference
+## References
 
 #### [1] [Create React App with an Express Backend](https://daveceddia.com/create-react-app-express-backend/)
 
