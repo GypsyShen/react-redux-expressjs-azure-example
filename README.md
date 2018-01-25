@@ -273,7 +273,7 @@ fi
 
 Add the above code snippet after the code of `# 3. Install npm packages` (line 112) after line 118.
 
-Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in the Kudu dashboard of the Azure web app [[8]](#8-kudu-dashboard-httpsscmazurewebsitesnet):
+Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in the Kudu dashboard of the Azure web app [[8]](##8-kudu-dashboard-of-azure-app-azure-app-name-httpsazure-app-namescmazurewebsitesnet):
 
 ```
 https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > wwwroot > client
