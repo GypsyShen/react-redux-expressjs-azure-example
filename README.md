@@ -305,4 +305,4 @@ Edit the `log.log` file, you should find `Running custom deployment command...,`
 
 #### [7] [My first experience with React, NodeJS and Azure](https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure)
 
-#### [8] Kudu dashboard of Azure app <azure app name>: `https://<azure app name>.scm.azurewebsites.net`
+#### [8] Kudu dashboard of Azure app `<azure app name>`: `https://<azure app name>.scm.azurewebsites.net`
