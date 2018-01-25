@@ -273,7 +273,7 @@ fi
 
 Add the above code snippet after the code of `# 3. Install npm packages` (line 112) after line 118.
 
-Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in the Kudu dashboard of the Azure web app:
+Now we can remove the build folder of the client and commit all changes. Then push the change to GitHub, Azure would use the configured script for deployment. We could verify that the Azure uses the configured script by checking the modules of the react and redux todos app in the Kudu dashboard of the Azure web app [8]:
 
 ```
 https://react-redux-expressjs-azure-example.scm.azurewebsites.net > Debug console > CMD > site > wwwroot > client
@@ -304,3 +304,5 @@ Edit the `log.log` file, you should find `Running custom deployment command...,`
 #### [6] [error: 'site' is not an azure command. See 'azure help'](https://social.msdn.microsoft.com/Forums/azure/en-US/8459d5d1-63fb-44ae-8608-9cb0da79a560/error-site-is-not-an-azure-command-see-azure-help)
 
 #### [7] [My first experience with React, NodeJS and Azure](https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure)
+
+#### [8] Kudu dashboard: https://<azure app name>.scm.azurewebsites.net
