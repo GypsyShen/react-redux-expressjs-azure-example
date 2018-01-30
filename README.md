@@ -183,7 +183,7 @@ Type `http://localhost:3000` in local browser, the redux todos app shows up:
 
 #### Step 2: serve the redux todos app by the express app
 
-The react and redux todos app is serverd by pointing the express app's frontend to the production build of the react and redux app.
+The react and redux todos app is serverd by pointing the express app's frontend to the production build of the react and redux app [[9]](#9-react-web-and-express-api-for-development-and-production).
 
 First, build the react and redux app with the following command in the `client` directory, which generates a `build/` folder:
 
@@ -306,3 +306,5 @@ Edit the `log.log` file, you should find `Running custom deployment command...,`
 #### [7] [My first experience with React, NodeJS and Azure](https://dev.to/manny42/my-first-experience-with-react-nodejs-and-azure)
 
 #### [8] Kudu dashboard of Azure app `<azure app name>`: `https://<azure app name>.scm.azurewebsites.net`
+
+#### [9] [React Web and Express API for development and production](https://www.ibm.com/blogs/bluemix/2017/06/react-web-express-api-development-production/)
